@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/toolbar_layout"
+        android:id="@+id/toolBar"/>
+
+
+
+  <!-- AUTHOR RECYCLER VIEW START -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/toolBar"
+        android:orientation="horizontal"
+        android:id="@+id/author_linear_layout">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/view"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="#ADD8E6"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Authors"
+               android:textStyle="bold"
+               android:layout_marginStart="12dp"
+               android:id="@+id/author_heading"
+               android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="30dp"
+                android:id="@+id/author_recyclerView"
+                android:layout_marginTop="10dp"
+                android:scrollbars="horizontal">
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- AUTHOR RECYCLER VIEW END -->
+
+    <!-- POPULAR BOOKS RECYCLER VIEW START -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/author_linear_layout"
+        android:orientation="horizontal"
+        android:id="@+id/popular_linear_layout">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/view1"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="#a6a6a6"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular Books"
+                android:textStyle="bold"
+                android:id="@+id/poplar_heading"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:id="@+id/popular_books_recyclerView"
+                android:layout_marginTop="10dp"
+                android:paddingEnd="30dp"
+                android:scrollbars="horizontal">
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <!-- POPULAR BOOKS RECYCLER VIEW ENDS -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout1"
+        android:layout_below="@+id/popular_linear_layout"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explore By Category"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:id="@+id/headingExploreByCategory"
+           />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:id="@+id/linearLayout1"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/relLayout1"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+            card_view:cardUseCompatPadding="true"
+        android:layout_height="150dp"
+            card_view:cardElevation="10dp"
+        card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:textColor="#000"
+                android:id="@+id/cardOneTextView"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:text="FICTION"/>
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp"
+                android:id="@+id/cardOneImageView"
+                android:layout_below="@+id/cardOneTextView"
+                />
+
+
+        </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_gravity="center"
+            android:layout_width="150dp"
+            card_view:cardUseCompatPadding="true"
+            android:layout_height="150dp"
+            card_view:cardElevation="10dp"
+            card_view:cardCornerRadius="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textColor="#000"
+                    android:id="@+id/cardTwoTextView"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:text="NON-FICTION"/>
+
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/cardTwoImageView"
+                    android:layout_below="@+id/cardTwoTextView"
+                    />
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
+</ScrollView>
